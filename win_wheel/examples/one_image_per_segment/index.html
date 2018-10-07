@@ -32,13 +32,12 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     </head>
     <body>
+        <div class = "header" align="center">
+            <img class = "logo" src="images/spin_wheel_pic.jpg">
+              
+        </div>
         <div align="center">
-            <h1>Winwheel.js example wheel - one image per segment</h1>
-            <br />
-            <p>Here is an example of a wheel created using one image per segment, also includes code drawn text.</p>
-            <br />
-            <p>Choose a power setting then press the Spin button.</p>
-            <br />
+
             <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
                     <td>
@@ -90,20 +89,20 @@
                 'drawMode'          : 'segmentImage',    // Must be segmentImage to draw wheel using one image per segemnt.
                 'segments'          :                    // Define segments including image and text.
                 [
-                   {'image' : 'jane.png',  'text' : 'Jane'},
-                   {'image' : 'tom.png',   'text' : 'Tom'},
-                   {'image' : 'mary.png',  'text' : 'Mary'},
-                   {'image' : 'alex.png',  'text' : 'Alex'},
-                   {'image' : 'sarah.png', 'text' : 'Sarah'},
-                   {'image' : 'bruce.png', 'text' : 'Bruce'},
-                   {'image' : 'rose.png',  'text' : 'Rose'},
-                   {'image' : 'steve.png', 'text' : 'Steve'}
+                   {'image' : 'jane.png',  'text' : 'Tix'},
+                   {'image' : 'tom.png',   'text' : 'Food'},
+                   {'image' : 'mary.png',  'text' : 'Shirt'},
+                   {'image' : 'alex.png',  'text' : 'Beer'},
+                   {'image' : 'sarah.png', 'text' : 'Tix'},
+                   {'image' : 'bruce.png', 'text' : 'Shirt'},
+                   {'image' : 'rose.png',  'text' : 'Beer'},
+                   {'image' : 'steve.png', 'text' : 'Tix'}
                 ],
                 'animation' :           // Specify the animation to use.
                 {
                     'type'     : 'spinToStop',
-                    'duration' : 5,     // Duration in seconds.
-                    'spins'    : 8,     // Number of complete spins.
+                    'duration' : 8,     // Duration in seconds.
+                    'spins'    : 15,     // Number of complete spins.
                     'callbackFinished' : alertPrize
                 }
             });
@@ -209,7 +208,7 @@
             function alertPrize(indicatedSegment)
             {
                 // Do basic alert of the segment text. You would probably want to do something more interesting with this information.
-                alert(indicatedSegment.text + ' says Hi');
+                alert("You won FREE " + indicatedSegment.text +  '!!!');
             }
         </script>
     </body>
